@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { SliderContainer, Sliders, Slider, IndicatorContainer, Indicator, Title, Description } from "../styles/Styles";
+import { SliderContainer, Sliders, Slider, VerticalIndicator, Indicator, Title, Description } from "../styles/Styles";
 import { sliderTexts } from './SlidersData';
 
 
@@ -13,6 +13,7 @@ const SliderComponent1 = () => {
             setIndex((index + 1) % sliderTexts.length);
         }, 3500);
     }, [index])
+
 
 
     return (
@@ -30,11 +31,11 @@ const SliderComponent1 = () => {
                     })
                 } 
             </Sliders>
-            <IndicatorContainer>
+            <VerticalIndicator>
                 {sliderTexts.map((s, i) => {
-                    return <Indicator key = {s.id} isVisible = {index === i} />
+                    return <Indicator key = {s.id} isVisible = {index === i}/>
                 })}
-            </IndicatorContainer>
+            </VerticalIndicator>
         </SliderContainer>
     )
 }

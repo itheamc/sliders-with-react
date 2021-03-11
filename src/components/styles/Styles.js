@@ -42,28 +42,28 @@ const leftenter = keyframes`
 `
 
 // Animation for slider -- right to left
-const rightenter = keyframes`
-    0% {
-        opacity: 0;
-        right: -40%;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.5;
-        left: -20%;
-        right: 20%;
-    }
-    75% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 1;
-        left: 0;
-        right: 0;
-    }
-`
+// const rightenter = keyframes`
+//     0% {
+//         opacity: 0;
+//         right: -40%;
+//     }
+//     25% {
+//         opacity: 0.25;
+//     }
+//     50% {
+//         opacity: 0.5;
+//         left: -20%;
+//         right: 20%;
+//     }
+//     75% {
+//         opacity: 0.75;
+//     }
+//     100% {
+//         opacity: 1;
+//         left: 0;
+//         right: 0;
+//     }
+// `
 
 export const Slider = styled.div`
     width: 100%;
@@ -75,7 +75,7 @@ export const Slider = styled.div`
     align-content: center;
     text-align:center;
     flex-wrap: wrap;
-    background-color: ${({bgColor}) => bgColor || 'white'};
+    background-color: ${({bgColor}) => bgColor || 'black'};
     animation: ${leftenter} 2s linear;
     /* transition: all 2s cubic-bezier(0.785, 0.135, 0.15, 0.86); */
 `
@@ -97,7 +97,7 @@ export const SliderImage = styled.img`
     /* src: url(); */
 `
 
-export const IndicatorContainer = styled.div`
+export const VerticalIndicator = styled.div`
     width: auto;
     height: 100%;
     position: absolute;
@@ -106,6 +106,17 @@ export const IndicatorContainer = styled.div`
     justify-content: center;
     /* background-color: yellow; */
     right: 24px;
+`
+
+export const HorizontalIndicator = styled.div`
+    width: 100%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: yellow; */
+    bottom: 24px;
 `
 
 export const Indicator = styled.span`

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { SliderContainer, Sliders, Slider, SliderImage, IndicatorContainer, Indicator } from "../styles/Styles";
+import { SliderContainer, Sliders, Slider, SliderImage, Indicator, HorizontalIndicator } from "../styles/Styles";
 import { slidersData } from './SlidersData';
 
 
@@ -22,11 +22,11 @@ const SliderComponent = () => {
                     <SliderImage src = {slider?.url} />
                 </Slider>
             </Sliders>
-            <IndicatorContainer>
+            <HorizontalIndicator>
                 {slidersData.map((s, i) => {
                     return <Indicator key = {s.id} isVisible = {index === i} />
                 })}
-            </IndicatorContainer>
+            </HorizontalIndicator>
         </SliderContainer>
     )
 }
